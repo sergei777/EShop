@@ -1,4 +1,4 @@
-import org.tulybz.entities.ClientAddressEntity;
+import org.tylubz.entities.ClientAddress;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -9,7 +9,7 @@ import javax.persistence.Persistence;
  */
 public class Main {
     public static void main(String[] args) {
-        ClientAddressEntity entity = new ClientAddressEntity();
+        ClientAddress entity = new ClientAddress();
         entity.setCity("NewYork");
         entity.setCountry("USA");
         entity.setPostcode(197232);

@@ -1,6 +1,4 @@
-package org.tulybz.entities;
-
-import org.tulybz.entities.OrderEntity;
+package org.tylubz.entities;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -11,7 +9,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "user")
-public class UserEntity {
+public class User {
 
     @Id
     @Column(name = "id")
@@ -38,7 +36,7 @@ public class UserEntity {
     private String password;
 
     @OneToMany(mappedBy = "user")
-    private List<OrderEntity> orders;
+    private List<Order> orders;
 
     public int getId() {
         return id;
@@ -88,11 +86,11 @@ public class UserEntity {
         this.password = password;
     }
 
-    public List<OrderEntity> getOrders() {
+    public List<Order> getOrders() {
         return orders;
     }
 
-    public void setOrders(List<OrderEntity> orders) {
+    public void setOrders(List<Order> orders) {
         this.orders = orders;
     }
 }

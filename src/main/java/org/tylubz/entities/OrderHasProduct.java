@@ -1,4 +1,4 @@
-package org.tulybz.entities;
+package org.tylubz.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -8,7 +8,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "order_has_product")
-public class OrderHasProductEntity implements Serializable{
+public class OrderHasProduct implements Serializable{
 
     @Id
     @Column(name = "order_id")

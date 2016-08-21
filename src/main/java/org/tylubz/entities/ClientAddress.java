@@ -1,4 +1,4 @@
-package org.tulybz.entities;
+package org.tylubz.entities;
 
 import javax.persistence.*;
 
@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "clientaddress")
-public class ClientAddressEntity {
+public class ClientAddress {
 
     @Id
     @Column(name = "id")

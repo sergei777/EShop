@@ -1,4 +1,4 @@
-package org.tulybz.entities;
+package org.tylubz.entities;
 
 import javax.persistence.*;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "order")
-public class OrderEntity {
+public class Order {
     @Id
     @Column(name = "id")
     private int id;
@@ -31,17 +31,17 @@ public class OrderEntity {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id")
-    private ClientAddressEntity clientAddress;
+    private ClientAddress clientAddress;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private UserEntity user;
+    private User user;
 
     @ManyToMany
     @JoinTable(name = "OrderHasProductEntity",
             joinColumns = @JoinColumn(name = "order_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "product_id", referencedColumnName = "id"))
-            private List<ProductEntity> products;
+            private List<Product> products;
 
     public int getId() {
         return id;
@@ -83,27 +83,27 @@ public class OrderEntity {
         this.orderStatus = orderStatus;
     }
 
-    public List<ProductEntity> getProducts() {
+    public List<Product> getProducts() {
         return products;
     }
 
-    public void setProducts(List<ProductEntity> products) {
+    public void setProducts(List<Product> products) {
         this.products = products;
     }
 
-    public UserEntity getUser() {
+    public User getUser() {
         return user;
     }
 
-    public void setUser(UserEntity user) {
+    public void setUser(User user) {
         this.user = user;
     }
 
-    public ClientAddressEntity getClientAddress() {
+    public ClientAddress getClientAddress() {
         return clientAddress;
     }
 
-    public void setClientAddress(ClientAddressEntity clientAddress) {
+    public void setClientAddress(ClientAddress clientAddress) {
         this.clientAddress = clientAddress;
     }
 
