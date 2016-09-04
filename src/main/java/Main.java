@@ -1,4 +1,4 @@
-import org.tylubz.entities.ClientAddress;
+import org.tylubz.entity.ClientAddress;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

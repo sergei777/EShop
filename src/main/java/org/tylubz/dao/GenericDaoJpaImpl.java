@@ -1,5 +1,7 @@
 package org.tylubz.dao;
 
+import org.tylubz.utils.ServletContextListenerImpl;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -12,12 +14,10 @@ public class GenericDaoJpaImpl<E,PK extends Serializable>
 
     protected Class<E> entityClass;
 
-    @PersistenceContext(unitName = "myapp")
     protected EntityManager entityManager;
 
     public GenericDaoJpaImpl(Class<E> entity){
-        EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("myapp");
-        entityManager = emFactory.createEntityManager();
+        entityManager = ServletContextListenerImpl.createEntityManager();
         entityClass = entity;
     }
 

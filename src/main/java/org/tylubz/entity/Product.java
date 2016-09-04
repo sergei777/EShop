@@ -1,4 +1,4 @@
-package org.tylubz.entities;
+package org.tylubz.entity;
 
 import javax.persistence.*;
 
@@ -13,19 +13,15 @@ public class Product {
     @Column(name = "id")
     private int id;
 
-    @Basic
     @Column(name = "name")
     private String name;
 
-    @Basic
     @Column(name = "price")
     private Double price;
 
-    @Basic
     @Column(name = "category")
     private String category;
 
-    @Basic
     @Column(name = "weight")
     private Double weight;
 
@@ -33,7 +29,6 @@ public class Product {
     @Column(name = "volume")
     private String volume;
 
-    @Basic
     @Column(name = "amount")
     private Integer amount;
 

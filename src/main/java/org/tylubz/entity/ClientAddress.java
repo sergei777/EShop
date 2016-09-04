@@ -1,4 +1,4 @@
-package org.tylubz.entities;
+package org.tylubz.entity;
 
 import javax.persistence.*;
 
@@ -13,28 +13,22 @@ public class ClientAddress {
     @Column(name = "id")
     private int id;
 
-    @Basic
     @Column(name = "country")
     private String country;
 
-    @Basic
     @Column(name = "city")
     private String city;
 
-    @Basic
     @Column(name = "postcode")
     private Integer postcode;
 
-    @Basic
     @Column(name = "street_name")
     private String streetName;
 
 
-    @Basic
     @Column(name = "house_number")
     private Integer houseNumber;
 
-    @Basic
     @Column(name = "door")
     private Integer door;
 

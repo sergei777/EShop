@@ -1,4 +1,4 @@
-package org.tylubz.entities;
+package org.tylubz.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;

@@ -1,6 +1,7 @@
 package org.tylubz.service;
 
 import org.tylubz.dao.GenericDao;
+import org.tylubz.dao.GenericDaoJpaImpl;
 
 import java.io.Serializable;
 
@@ -9,7 +10,7 @@ import java.io.Serializable;
  */
 public class GenericService<E, PK extends Serializable> {
 
-    private GenericDao<E, PK> genericDao;
+    private GenericDaoJpaImpl<E, PK> genericDao;
 
     public E create(E newInstance) {
         genericDao.create(newInstance);

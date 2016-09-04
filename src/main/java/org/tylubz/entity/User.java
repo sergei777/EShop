@@ -1,7 +1,7 @@
-package org.tylubz.entities;
+package org.tylubz.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -12,26 +12,23 @@ import java.util.List;
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
-    @Basic
     @Column(name = "first_name")
     private String firstName;
 
-    @Basic
     @Column(name = "second_name")
     private String secondName;
 
-    @Basic
-    @Column(name = "birthDate")
+    @Temporal(value = TemporalType.DATE)
+    @Column(name = "birth_date")
     private Date birthDate;
 
-    @Basic
     @Column(name = "email")
     private String email;
 
-    @Basic
     @Column(name = "password")
     private String password;
 

@@ -1,4 +1,4 @@
-package org.tylubz.entities;
+package org.tylubz.entity;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,19 +13,15 @@ public class Order {
     @Column(name = "id")
     private int id;
 
-    @Basic
     @Column(name = "payment_type")
     private String paymentType;
 
-    @Basic
     @Column(name = "delivery_type")
     private String deliveryType;
 
-    @Basic
     @Column(name = "payment_status")
     private String paymentStatus;
 
-    @Basic
     @Column(name = "order_status")
     private String orderStatus;
 
