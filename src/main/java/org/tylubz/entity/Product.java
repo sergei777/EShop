@@ -25,12 +25,14 @@ public class Product {
     @Column(name = "weight")
     private Double weight;
 
-    @Basic
     @Column(name = "volume")
     private String volume;
 
     @Column(name = "amount")
     private Integer amount;
+
+    @Column(name = "img_path")
+    private String imagePath;
 
     public int getId() {
         return id;
@@ -88,4 +90,12 @@ public class Product {
         this.amount = amount;
     }
 
+    public String getImagePath() {
+        return imagePath;
+    }
+
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
 }
+

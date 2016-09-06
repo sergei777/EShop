@@ -65,6 +65,10 @@
         margin-top: 0px;
         margin-bottom: 5px;
     }
+
+    .navbar-default{
+        background-color: #fbfbff;W
+    }
 </style>
 <body>
 <div id="pageheader">
@@ -75,7 +79,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="/index.jsp">На главную</a></li>
                     <li><a href="/about/">О компании</a></li>
-                    <li><a href="/AddressServlet">Каталог товаров</a></li>
+                    <li><a href="/products">Каталог товаров</a></li>
                     <li><a href="/contact/">Контакты</a></li>
                 </ul>
             </div>

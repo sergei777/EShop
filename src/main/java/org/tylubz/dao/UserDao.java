@@ -13,7 +13,7 @@ public class UserDao extends GenericDaoJpaImpl{
     }
 
     public User getEntityByUsernameAndPassword(String username, String password){
-        String queryString = "SELECT a FROM User AS a WHERE a.firstName = :username AND a.password = :password";
+        String queryString = "SELECT a FROM User AS a WHERE a.username = :username AND a.password = :password";
         Query query = entityManager.createQuery(queryString);
         query.setParameter("username",username);
         query.setParameter("password",password);

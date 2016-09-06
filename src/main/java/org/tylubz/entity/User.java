@@ -16,6 +16,12 @@ public class User {
     @Column(name = "id")
     private int id;
 
+    @Column(name = "username")
+    private String username;
+
+    @Column(name = "user_type")
+    private String userType;
+
     @Column(name = "first_name")
     private String firstName;
 
@@ -41,6 +47,22 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getFirstName() {
